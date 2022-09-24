@@ -12,33 +12,32 @@ from game_data import data
 #         'description': 'Social media platform',
 #         'country': 'United States'
 #     },
+def format_data(account): #re-use it to format for account a and b
+    """Format the account data into printable format"""
+    account_name = account["name"]
+    account_descr = account["description"]
+    account_country = account["country"]
+    return f"{account_name}, a {account_descr} from {account_country}"
 
 
 # Generate a random account from the game data.
-choice_a = random.choice(data)
-choice_b = random.choice(data)
-print(f"Compare A: {choice_a} \n {vs} \n Against B: {choice_b}")
+account_a = random.choice(data)
+account_b = random.choice(data)
 
-a = choice_a["follower_count"]
-print(a)
-b = choice_b["follower_count"]
-print(b)
-#Let the user make a guess
-guess = input("Who has more follower? a or b: ")
-#Assign values according to the guess
-if guess == "a":
-    guess = a
-    vari = b
-    print(guess)
-else:
-    guess == "b"
-    guess = b
-    vari = a
-    print(guess)
-    if guess > vari:
-        print("You're right")
-    else:
-        print("You loose")
+if account_a == account_b:
+    account_b = random.choice(data)
+
+print(f"Compare A: {format_data(account_a)}") #format_data returns "name", "description" and "country" for account_a
+print(f"Compare B: {format_data(account_b)}") #format_data returns "name", "description" and "country" for account_b
+
+# #Format the account data into printable format
+# account_name = account_a["name"]
+# account_descr = account_a["description"]
+# account_country = account_a["country"]
+# print(f"{account_name}, a {account_description} from {account_country}")
+
+
+
 
 
 
