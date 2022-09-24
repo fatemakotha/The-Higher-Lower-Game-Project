@@ -20,9 +20,26 @@ choice_b = random.choice(data)
 print(f"Compare A: {choice_a} \n {vs} \n Against B: {choice_b}")
 
 a = choice_a["follower_count"]
-print(follower_a)
-a = choice_a["follower_count"]
-
+print(a)
+b = choice_b["follower_count"]
+print(b)
+#Let the user make a guess
 guess = input("Who has more follower? a or b: ")
+#Assign values according to the guess
+if guess == "a":
+    guess = a
+    vari = b
+    print(guess)
+else:
+    guess == "b"
+    guess = b
+    vari = a
+    print(guess)
+    if guess > vari:
+        print("You're right")
+    else:
+        print("You loose")
+
+
 
 
