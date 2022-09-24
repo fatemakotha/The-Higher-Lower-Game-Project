@@ -69,12 +69,15 @@ while game_should_continue:
     #Give user some feedback on guesses:
     if is_correct:
         score += 1
+        #clear screen in between rounds:
+        clear()
+        print(logo)
         print(f"You're right, you're score is {score}")
     else:
         game_should_continue = False
         print(f"Sorry, that's wrong. Your final score is {score}")
 
-#clear screen in between rounds:
+
 
 
 
