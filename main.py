@@ -13,11 +13,28 @@ from game_data import data
 #         'country': 'United States'
 #     },
 def format_data(account): #re-use it to format for account a and b
-    """Format the account data into printable format"""
+    """Taked the account data and returns printable format"""
     account_name = account["name"]
     account_descr = account["description"]
     account_country = account["country"]
     return f"{account_name}, a {account_descr} from {account_country}"
+
+
+
+def check_answer(guess, a_followers, b_followers):
+    """Take the user's guess and the follower counts of a and b and return if user is correct"""
+    if a_followers > b_followers:
+        return guess == "a" #if gues === a then it will return True but                             if gues != a it will return False
+    else:
+        return guess == "b" #if gues === b then it will return True but                             if gues != b it will return False
+        
+
+
+
+
+
+
+    
 
 
 # Generate a random account from the game data.
@@ -48,7 +65,6 @@ b_follower_count = account_b["follower_count"] #pulls the value of "follower_cou
 
 
 
-##Use if statement to check if user is correct
 
 
 
