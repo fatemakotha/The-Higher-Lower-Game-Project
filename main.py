@@ -1,7 +1,7 @@
 import random
-from art import logo
+from art import logo, vs
 print(logo)
-from art import vs
+
 # print(vs)
 from game_data import data
 # # print(data)
@@ -21,14 +21,15 @@ def format_data(account): #re-use it to format for account a and b
 
 
 # Generate a random account from the game data.
-account_a = random.choice(data)
-account_b = random.choice(data)
+account_a = random.choice(data) #picks one entry from the data list
+account_b = random.choice(data) #picks one entry from the data list
 
-if account_a == account_b:
+if account_a == account_b: #incase both the picked entry is same 
     account_b = random.choice(data)
 
 print(f"Compare A: {format_data(account_a)}") #format_data returns "name", "description" and "country" for account_a
-print(f"Compare B: {format_data(account_b)}") #format_data returns "name", "description" and "country" for account_b
+print(vs)
+print(f"Against B: {format_data(account_b)}") #format_data returns "name", "description" and "country" for account_b
 
 # #Format the account data into printable format
 # account_name = account_a["name"]
@@ -36,7 +37,18 @@ print(f"Compare B: {format_data(account_b)}") #format_data returns "name", "desc
 # account_country = account_a["country"]
 # print(f"{account_name}, a {account_description} from {account_country}")
 
+#Ask the user for a guess
+guess = input("Who has more folllowers? Type 'A' or 'B': ").lower()
 
+#Check if user is correct
+##Get follower count of each account 
+a_follower_count = account_a["follower_count"] #pulls the value of "follower_count" from account_a 
+b_follower_count = account_b["follower_count"] #pulls the value of "follower_count" from account_b
+
+
+
+
+##Use if statement to check if user is correct
 
 
 
