@@ -14,9 +14,17 @@ from game_data import data
 #         'country': 'United States'
 #     },
 
-# Generate a random account from the game data.
+# Generate a random account from the game data.....1
 account_a = random.choice(data)
-account_a = random.choice(data)
+account_b = random.choice(data)
+print(account_a)
+print(account_b)
+#Make sure the randomly chosen accounts are not the same.....2
+if account_a == account_b:
+    account_b = random.choice(data)
+
+
+
 # Format account data into printable format.
 
 # Ask user for a guess.
