@@ -46,8 +46,12 @@ guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 follower_count_a = account_a["follower_count"]
 follower_count_b = account_b["follower_count"]
 
+#Set score.....7
+score = 0
+
 # Check if user is correct.....6
 if guess == "a" and follower_count_a > follower_count_b:
+    
     print("You win")
 elif guess == "b" and follower_count_b > follower_count_a:
     print("You win")
