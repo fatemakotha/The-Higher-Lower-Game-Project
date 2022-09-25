@@ -51,10 +51,11 @@ score = 0
 
 # Check if user is correct.....6
 if guess == "a" and follower_count_a > follower_count_b:
-    
-    print("You win")
+    score += 1
+    print(f"You win, your score is {score}")
 elif guess == "b" and follower_count_b > follower_count_a:
-    print("You win")
+    score += 1
+    print(f"You win, your score is {score}")
 elif guess == "a" and follower_count_a < follower_count_b:
     print("You Lose")
 elif guess == "b" and follower_count_b < follower_count_a:
