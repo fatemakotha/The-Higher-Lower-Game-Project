@@ -25,7 +25,27 @@ if account_a == account_b:
 
 
 
-# Format account data into printable format.
+# Format account data into printable format.....3
+#For account_a:
+name = account_a["name"]
+descr = account_a["description"]
+country = account_a["country"]
+print(f"Compare A {name}, {descr}, from {country}")
+#For account_a:
+name = account_b["name"]
+descr = account_b["description"]
+country = account_b["country"]
+print(f"Compare A {name}, {descr}, from {country}")
+
+
+
+
+
+
+
+
+
+
 
 # Ask user for a guess.
 
