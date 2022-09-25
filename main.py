@@ -15,7 +15,8 @@ from game_data import data
 #     },
 
 # Generate a random account from the game data.
-
+account_a = random.choice(data)
+account_a = random.choice(data)
 # Format account data into printable format.
 
 # Ask user for a guess.
