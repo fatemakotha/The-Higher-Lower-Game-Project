@@ -18,9 +18,7 @@ def get_random_account():
   """Get data from random account"""
   return random.choice(data)
     
-#Make sure the randomly chosen accounts are not the same.....2
-if account_a == account_b:
-    account_b = random.choice(data)
+
 
 
 
@@ -44,34 +42,55 @@ def check_answer(guess, a_followers, b_followers):
   else:
     return guess == "b"
 
+#Define the game:
+def game():
+  print(logo)
+  score = 0
+  game_should_continue = True
+  account_a = get_random_account()
+  account_b = get_random_account()
 
-# Ask user for a guess......4
-guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+  while game_should_continue:
+    account_a = account_b
+    account_b = get_random_account()
+    if account_a == account_b:
+       account_b = get_random_account() #incase the 2 randomly chosen accounts end up the same
 
-#Set the follower count.....5
-follower_count_a = account_a["follower_count"]
-follower_count_b = account_b["follower_count"]
+    print(f"Compare A: {format_data(account_a)}.")
+    print(vs)
+    print(f"Against B: {format_data(account_b)}.")
+    
+    guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+    a_follower_count = account_a["follower_count"]
+    b_follower_count = account_b["follower_count"]
+    is_correct = check_answer(guess, a_follower_count, b_follower_count)
 
-#Set score.....7
-print(logo)
-score = 0
-#Set game status
-is_game_over = False
+    clear()
+    print(logo)
+    if is_correct:
+      score += 1
+      print(f"You're right! Current score: {score}.")
+    else:
+      game_should_continue = False
+      print(f"Sorry, that's wrong. Final score: {score}")
 
-while not is_game_over:
+game()
+
+
+
     # Check if user is correct.....6
-    if guess == "a" and follower_count_a > follower_count_b:
-        score += 1
-        print(f"You win, your score is {score}")
-    elif guess == "b" and follower_count_b > follower_count_a:
-        score += 1
-        print(f"You win, your score is {score}")
-    elif guess == "a" and follower_count_a < follower_count_b:
-        is_game_over = True
-        print("You Lose")
-    elif guess == "b" and follower_count_b < follower_count_a:
-        is_game_over = True
-        print("You Lose")
+    # if guess == "a" and follower_count_a > follower_count_b:
+    #     score += 1
+    #     print(f"You win, your score is {score}")
+    # elif guess == "b" and follower_count_b > follower_count_a:
+    #     score += 1
+    #     print(f"You win, your score is {score}")
+    # elif guess == "a" and follower_count_a < follower_count_b:
+    #     is_game_over = True
+    #     print("You Lose")
+    # elif guess == "b" and follower_count_b < follower_count_a:
+    #     is_game_over = True
+    #     print("You Lose")
     
 
 
