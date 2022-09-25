@@ -25,17 +25,13 @@ if account_a == account_b:
 
 
 # Format account data into printable format.....3
-#For account_a:
-name = account_a["name"]
-descr = account_a["description"]
-country = account_a["country"]
-print(f"Compare A {name}, {descr}, from {country}")
-print(vs)
-#For account_a:
-name = account_b["name"]
-descr = account_b["description"]
-country = account_b["country"]
-print(f"Compare B {name}, {descr}, from {country}")
+def format_data(account):
+  """Format account into printable format: name, description and country"""
+  name = account["name"]
+  description = account["description"]
+  country = account["country"]
+  # print(f'{name}: {account["follower_count"]}')
+  return f"{name}, a {description}, from {country}"
 
 
 # Ask user for a guess......4
