@@ -31,15 +31,16 @@ name = account_a["name"]
 descr = account_a["description"]
 country = account_a["country"]
 print(f"Compare A {name}, {descr}, from {country}")
+print(vs)
 #For account_a:
 name = account_b["name"]
 descr = account_b["description"]
 country = account_b["country"]
-print(f"Compare A {name}, {descr}, from {country}")
+print(f"Compare B {name}, {descr}, from {country}")
 
 
 # Ask user for a guess......4
-guess = input("Who has more followers? Type 'A' or 'B': ")
+guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 
 
 
