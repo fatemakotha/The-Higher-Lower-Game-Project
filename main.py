@@ -48,6 +48,9 @@ follower_count_b = account_b["follower_count"]
 
 #Set score.....7
 score = 0
+#Set game status
+is_game_over = False
+
 
 # Check if user is correct.....6
 if guess == "a" and follower_count_a > follower_count_b:
