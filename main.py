@@ -42,7 +42,17 @@ print(f"Compare B {name}, {descr}, from {country}")
 # Ask user for a guess......4
 guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 
+#Set the follower count.....5
+follower_count_a = account_a[follower_count]
+follower_count_a = account_a[follower_count]
 
+
+if guess == "a" and a > b:
+    print("You win")
+elif guess == "b" and b > a:
+    print("You win")
+elif guess == "a" and a >
+    
 
 
 
