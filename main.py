@@ -76,13 +76,17 @@ def game():
         is_correct = check_answer(guess, a_follower_count, b_follower_count)
         # is_correct = if a_followers > b_followers:
         #      return guess == "a"
+        #return "a" == "a" #in which case it returns True
+        #return "b" == "a" #in which case it returns False
         # else:
         #      return guess == "b"
+        #return "a" == "b" #in which case it returns False
+        #return "b" == "b" #in which case it returns True
         # is_correct = True
 
         clear()
         print(logo)
-        if is_correct:
+        if is_correct:  #either True or False
             score += 1
             print(f"You're right! Current score: {score}.")
         else:
